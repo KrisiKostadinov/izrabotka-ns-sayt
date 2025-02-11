@@ -17,6 +17,11 @@ export const navigationItems: NavigationItem[] = [
     icon: "UsersRound",
   },
   {
+    title: "Блог",
+    link: "/blog",
+    icon: "List",
+  },
+  {
     title: "Контакти",
     link: "/contacts",
     icon: "Phone",

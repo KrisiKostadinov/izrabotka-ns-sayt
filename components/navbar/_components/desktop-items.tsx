@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { ComponentPropsWithoutRef } from "react";
 
@@ -10,6 +12,8 @@ type DesktopNavbarProps = {
 } & ComponentPropsWithoutRef<"ul">;
 
 export default function DesktopNavbar({ items, ...props }: DesktopNavbarProps) {
+  if (typeof window === "undefined") return null;
+
   return (
     <nav {...props}>
       <ul className="flex justify-center gap-5">

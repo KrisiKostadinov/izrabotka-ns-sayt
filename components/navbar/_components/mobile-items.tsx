@@ -1,27 +1,33 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ComponentPropsWithoutRef, useState } from "react";
+import { MenuIcon, PhoneIcon, X } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { ClientIcon } from "@/components/ui/client-icon";
 import { NavigationItem } from "@/components/navbar/_types";
-import { MenuIcon, X } from "lucide-react";
 
 type MobileNavbarProps = {
   items: NavigationItem[];
-  className: string;
-} & ComponentPropsWithoutRef<"div">;
+  adminSupportPhone: string;
+};
 
 export default function MobileNavbar({
   items,
-  className,
-  ...props
+  adminSupportPhone,
 }: MobileNavbarProps) {
-  const [open, setOpen] = useState<boolean>(false);
+  const [open, setOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   return (
-    <div {...props}>
+    <div>
       <div
         className={cn(
           "fixed top-0 left-0 w-full min-h-screen z-30 duration-200",
@@ -43,12 +49,17 @@ export default function MobileNavbar({
           <X size={32} />
         </button>
       </div>
-      <button
-        className="absolute top-2 left-2 z-40 cursor-pointer"
-        onClick={() => setOpen(!open)}
-      >
-        <MenuIcon size={32} />
-      </button>
+      <div className="fixed top-0 py-4 flex justify-between z-20">
+        <button
+          className="cursor-pointer"
+          onClick={() => setOpen(!open)}
+        >
+          <MenuIcon size={32} />
+        </button>
+        <Link className="fixed right-5 top-5" href={`tel:${adminSupportPhone}`}>
+          <PhoneIcon className="w-[60px] h-[60px] rounded-full p-2 bg-green-500" />
+        </Link>
+      </div>
       <nav
         className={cn(
           "w-2/3 min-h-screen border border-slate-100 dark:border-slate-800 shadow-md z-40 fixed top-0 left-0 bg-white dark:bg-slate-900 duration-200",
@@ -60,9 +71,7 @@ export default function MobileNavbar({
             <li key={index} className="w-full">
               <Link
                 href={navigationItem.link}
-                className={cn(
-                  "py-5 px-6 w-full flex items-center gap-2 hover:bg-white dark:hover:bg-black-100 duration-100"
-                )}
+                className="py-5 px-6 w-full flex items-center gap-2 hover:bg-white dark:hover:bg-black-100 duration-100"
               >
                 <ClientIcon name={navigationItem.icon} />
                 <div className="text-lg">{navigationItem.title}</div>
