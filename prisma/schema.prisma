@@ -87,3 +87,11 @@ model EmailTemplate {
   description String?
   key         String?
 }
+
+model ContactMessage {
+  id        String @id @default(uuid()) @map("_id")
+  firstName String
+  lastName  String
+  email     String
+  message   String
+}

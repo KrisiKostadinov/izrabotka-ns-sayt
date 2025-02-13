@@ -6,7 +6,6 @@ import { ComponentPropsWithoutRef, useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { ClientIcon } from "@/components/ui/client-icon";
 import { NavigationItem } from "@/components/navbar/_types";
-import LoadingComponent from "@/components/loading";
 
 type DesktopNavbarProps = {
   items: NavigationItem[];
