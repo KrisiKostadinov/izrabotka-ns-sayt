@@ -6,14 +6,15 @@ import { replaceVariables } from "@/lib/mails/helper";
 import { sendEmail } from "@/lib/mails/send-email";
 
 export async function sendMessage(contactData: ContactFormSchema) {
-  const { isAccept, ...others } = contactData;
-
   try {
     const createdMessage = await prisma.$transaction(
       async (prismaTransaction) => {
         const createdMessage = await prismaTransaction.contactMessage.create({
           data: {
-            ...others,
+            email: contactData.email,
+            firstName: contactData.firstName,
+            lastName: contactData.lastName,
+            message: contactData.message,
           },
         });
 
