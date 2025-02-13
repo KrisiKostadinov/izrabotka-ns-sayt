@@ -27,7 +27,22 @@ export default function MobileNavbar({
   if (!mounted) return null;
 
   return (
-    <div>
+    <>
+      {!open && (
+        <div className="flex justify-between z-20">
+          <button className="cursor-pointer" onClick={() => setOpen(!open)}>
+            <MenuIcon size={32} />
+          </button>
+          <Link
+            className="fixed right-5 bottom-5"
+            href={`tel:${adminSupportPhone}`}
+          >
+            <PhoneIcon className="w-[60px] h-[60px] rounded-full p-2 bg-green-500" />
+          </Link>
+        </div>
+      )}
+
+      {/* overlay panel */}
       <div
         className={cn(
           "fixed top-0 left-0 w-full min-h-screen z-30 duration-200",
@@ -49,29 +64,21 @@ export default function MobileNavbar({
           <X size={32} />
         </button>
       </div>
-      <div className="fixed top-0 py-4 flex justify-between z-20">
-        <button
-          className="cursor-pointer"
-          onClick={() => setOpen(!open)}
-        >
-          <MenuIcon size={32} />
-        </button>
-        <Link className="fixed right-5 top-5" href={`tel:${adminSupportPhone}`}>
-          <PhoneIcon className="w-[60px] h-[60px] rounded-full p-2 bg-green-500" />
-        </Link>
-      </div>
+
       <nav
         className={cn(
           "w-2/3 min-h-screen border border-slate-100 dark:border-slate-800 shadow-md z-40 fixed top-0 left-0 bg-white dark:bg-slate-900 duration-200",
           open ? "translate-x-0" : "-translate-x-full"
         )}
       >
+        {/* navbar items */}
         <ul className="flex flex-col items-start">
           {items.map((navigationItem, index) => (
             <li key={index} className="w-full">
               <Link
                 href={navigationItem.link}
                 className="py-5 px-6 w-full flex items-center gap-2 hover:bg-white dark:hover:bg-black-100 duration-100"
+                onClick={() => setOpen(!open)}
               >
                 <ClientIcon name={navigationItem.icon} />
                 <div className="text-lg">{navigationItem.title}</div>
@@ -80,6 +87,6 @@ export default function MobileNavbar({
           ))}
         </ul>
       </nav>
-    </div>
+    </>
   );
 }

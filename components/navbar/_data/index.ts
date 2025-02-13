@@ -26,4 +26,9 @@ export const navigationItems: NavigationItem[] = [
     link: "/contacts",
     icon: "Phone",
   },
+  {
+    title: "Вход",
+    link: "/login",
+    icon: "User",
+  },
 ];

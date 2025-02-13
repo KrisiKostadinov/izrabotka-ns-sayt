@@ -7,7 +7,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" suppressHydrationWarning>
+    <html lang="bg" className="dark" suppressHydrationWarning>
       <body>
         <ThemeProvider
           attribute="class"

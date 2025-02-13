@@ -8,7 +8,7 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 export default function Hero() {
   return (
     <div className="pb-20 pt-36">
-      <div>
+      <div className="fixed top-0 left-0 w-full min-h-screen z-10">
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
           fill="white"

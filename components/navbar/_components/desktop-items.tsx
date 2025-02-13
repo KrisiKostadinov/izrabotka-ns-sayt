@@ -1,18 +1,25 @@
 "use client";
 
 import Link from "next/link";
-import { ComponentPropsWithoutRef } from "react";
+import { ComponentPropsWithoutRef, useEffect, useState } from "react";
 
 import { cn } from "@/lib/utils";
 import { ClientIcon } from "@/components/ui/client-icon";
 import { NavigationItem } from "@/components/navbar/_types";
+import LoadingComponent from "@/components/loading";
 
 type DesktopNavbarProps = {
   items: NavigationItem[];
 } & ComponentPropsWithoutRef<"ul">;
 
 export default function DesktopNavbar({ items, ...props }: DesktopNavbarProps) {
-  if (typeof window === "undefined") return null;
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   return (
     <nav {...props}>
@@ -22,7 +29,7 @@ export default function DesktopNavbar({ items, ...props }: DesktopNavbarProps) {
             <Link
               href={navigationItem.link}
               className={cn(
-                "py-5 flex flex-col items-center justify-center gap-2 hover:scale-105 duration-100"
+                "flex flex-col items-center justify-center gap-2 hover:scale-105 duration-100"
               )}
             >
               <ClientIcon name={navigationItem.icon} />
