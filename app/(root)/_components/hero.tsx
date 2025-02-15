@@ -38,9 +38,9 @@ export default function Hero() {
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
             Здравейте! Аз съм Кристиан, уеб програмист на свободна практика.
           </p>
-          <Link href={"/projects"}>
+          <Link href={"/about"}>
             <MagicButton
-              title="Мойте проекти"
+              title="За мен"
               icon={<FaLocationArrow />}
               position="right"
             />

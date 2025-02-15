@@ -73,7 +73,7 @@ export default function Footer() {
           <ul className="flex flex-col gap-2 text-lg">
             <li>
               <Link
-                href={`/tel:${process.env.NEXT_PUBLIC_ADMIN_SUPPORT_PHONE}`}
+                href={`tel:${process.env.NEXT_PUBLIC_ADMIN_SUPPORT_PHONE}`}
                 className="flex items-center gap-2"
               >
                 <PhoneIcon />
@@ -86,7 +86,7 @@ export default function Footer() {
             </li>
             <li>
               <Link
-                href={`/mailto:${process.env.NEXT_PUBLIC_ADMIN_SUPPORT_EMAIL}`}
+                href={`mailto:${process.env.NEXT_PUBLIC_ADMIN_SUPPORT_EMAIL}`}
                 className="flex items-center gap-2"
               >
                 <MailIcon />

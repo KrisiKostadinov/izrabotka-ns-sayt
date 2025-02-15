@@ -1,4 +1,5 @@
 import * as LucideIcons from "lucide-react";
+import Link from "next/link";
 
 import { Card, CardHeader } from "@/components/ui/card";
 import { ClientIcon } from "@/components/ui/client-icon";
@@ -10,8 +11,16 @@ export default function DisplayCells() {
 
   return (
     <ul className="grid lg:grid-cols-3 gap-10">
-      <DisplayCell text={formatPhoneNumber(phoneNumber)} icon="PhoneIcon" />
-      <DisplayCell text={emailAddress} icon="MailIcon" />
+      <DisplayCell
+        text={formatPhoneNumber(phoneNumber)}
+        icon="PhoneIcon"
+        link={`tel:${phoneNumber}`}
+      />
+      <DisplayCell
+        text={emailAddress}
+        icon="MailIcon"
+        link={`mailto:${emailAddress}`}
+      />
       <DisplayCell text="Дупница" icon="LocateIcon" />
     </ul>
   );
@@ -19,16 +28,23 @@ export default function DisplayCells() {
 
 type DisplayCellProps = {
   text: string;
+  link?: string;
   icon: keyof typeof LucideIcons;
 };
 
-const DisplayCell = ({ text, icon }: DisplayCellProps) => {
+const DisplayCell = ({ text, icon, link }: DisplayCellProps) => {
   return (
     <li>
       <Card className="border-2 shadow-2xl shadow-black-100">
         <CardHeader className="flex justify-center text-center">
           <ClientIcon className="w-10 h-10 mx-auto" name={icon} />
-          <span className="text-xl">{text}</span>
+          {link ? (
+            <Link href={link}>
+              <span className="text-xl">{text}</span>
+            </Link>
+          ) : (
+            <span className="text-xl">{text}</span>
+          )}
         </CardHeader>
       </Card>
     </li>

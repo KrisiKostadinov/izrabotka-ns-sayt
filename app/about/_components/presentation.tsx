@@ -18,6 +18,7 @@ export default function Presentation() {
         />
       </article>
       <article className="text-lg space-y-5 py-5 lg:py-10 px-5 lg:px-10">
+        <h1 className="text-2xl font-semibold">За мен</h1>
         <p>
           Здравейте! Аз съм Кристиан, уеб програмист на свободна практика,
           фокусиран върху изграждането на ефективни, иновативни и
