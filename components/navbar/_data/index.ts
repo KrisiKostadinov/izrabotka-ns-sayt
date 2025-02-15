@@ -7,6 +7,11 @@ export const navigationItems: NavigationItem[] = [
     icon: "HouseIcon",
   },
   {
+    title: "За мен",
+    link: "/about",
+    icon: "User",
+  },
+  {
     title: "Проекти",
     link: "/projects",
     icon: "Box",
