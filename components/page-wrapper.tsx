@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 
 import NavigationBar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 type PageWrapperProps = {
   children: ReactNode;
@@ -15,6 +16,7 @@ export default function PageWrapper({ children }: PageWrapperProps) {
         </div>
       </header>
       {children}
+      <Footer />
     </>
   );
 }

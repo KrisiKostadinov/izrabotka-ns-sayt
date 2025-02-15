@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="bg">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Потвърждение за получено запитване - {{website_name}}</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        width: 100%;
+        min-height: 100vh;
+        background-color: #f3f4f6;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        padding: 40px 0;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: center;
+        padding-top: 2.5rem;
+      }
+
+      .pink-header {
+        background: linear-gradient(to right, #4d44aa, #161d86);
+        max-width: 600px;
+        margin: 0 auto;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        color: #ffffff;
+        font-size: 30px;
+        padding: 40px;
+        text-align: center;
+      }
+
+      .email-confirmation-card {
+        max-width: 600px;
+        background-color: #ffffff;
+        border: 2px solid #efefef;
+        margin: 0 auto;
+        padding: 40px;
+      }
+
+      .main-header {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 40px;
+        text-align: center;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background-color: #ffffff;
+      }
+
+      .main-header img {
+        width: 100px;
+        margin-bottom: 10px;
+      }
+
+      .main-header a {
+        text-decoration: none;
+        margin-top: 10px;
+        color: #111111;
+        width: 400px;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .email-description {
+        line-height: 1.5;
+      }
+
+      .email-description p {
+        margin-bottom: 20px;
+      }
+
+      .email-description p:last-child {
+        margin-bottom: 0;
+      }
+
+      .footer {
+        background-color: #111111;
+        max-width: 600px;
+        margin: 0 auto;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        color: #ffffff;
+        font-size: 30px;
+        padding: 40px;
+      }
+
+      .footer p {
+        margin-bottom: 10px;
+      }
+
+      .footer p:last-child {
+        margin-bottom: 0;
+      }
+
+      .footer a {
+        font-size: 18px;
+        text-decoration: none;
+        color: #ffffff;
+      }
+
+      .footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-header">
+        <a href="{{website_url}}">
+          <img src="{{website_url}}/logo.png" alt="{{website_name}}">
+          <p>Креативни и функционални уеб решения за Вашия бизнес</p>
+        </a>
+      </div>
+      <div class="pink-header">Потвърждение за получено запитване!</div>
+      <div class="email-confirmation-card">
+        <div class="email-description">
+          <p>
+            Благодарим Ви, че се свързахте с нас! Получихме Вашето запитване
+            относно изработката на уебсайт и ще го разгледаме възможно
+            най-скоро.
+          </p>
+          <p>
+            Нашият екип ще се свърже с Вас в
+            <strong>рамките на 24 часа</strong>, за да обсъдим Вашите изисквания
+            и да Ви предоставим допълнителна информация.
+          </p>
+          <p>
+            Ако имате допълнителни въпроси, не се колебайте да се свържете се
+            нас по някой от следните начини:
+          </p>
+        </div>
+      </div>
+      <div class="footer">
+        <p>
+          <a href="{{facebook}}">Facebook</a>
+        </p>
+        <p>
+          <a href="mailto:{{support_email}}">{{support_email}}</a>
+        </p>
+        <p>
+          <a href="tel:{{support_phone}}">{{support_phone}}</a>
+        </p>
+        <p>
+          <a href="{{website_url}}">Към: {{website_name}}</a>
+        </p>
+        <p>
+          <a href="{{website_url}}/terms" target="_blank">Общи условия</a>
+        </p>
+        <p>
+          <a href="{{website_url}}/privacy-policy" target="_blank">
+            Политика на поверителност
+          </a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

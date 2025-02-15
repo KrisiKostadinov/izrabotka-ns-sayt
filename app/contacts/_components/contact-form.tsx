@@ -38,7 +38,7 @@ export default function ContactForm() {
       lastName: "",
       email: "",
       message: "",
-      isAccept: "no",
+      isAccept: "yes",
     },
   });
 
@@ -50,11 +50,6 @@ export default function ContactForm() {
 
     try {
       const result = await sendMessage(values);
-      
-      if (result.error) {
-        return toast.error(result.error);
-      }
-
       toast.success(result.message);
       form.reset();
     } catch (error) {

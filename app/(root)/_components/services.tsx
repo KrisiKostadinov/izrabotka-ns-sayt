@@ -2,19 +2,17 @@ import Image from "next/image";
 
 export default function Services() {
   return (
-    <section>
+    <section className="bg-white dark:bg-black-100">
       <h2 className="py-10 text-3xl font-semibold text-center text-white bg-black dark:bg-black">
         Как мога да помогна на Вашия бизнес?
       </h2>
-      <div className="bg-white dark:bg-black-100">
-        <div className="container mx-auto py-10">
-          <p className="text-center text-lg max-w-4xl mx-auto">
-            В дигиталния свят Вашият уебсайт не е просто визитка – той е ключов
-            инструмент за развитието на бизнеса Ви. Аз създавам модерни, бързи и
-            надеждни уебсайтове и уеб приложения, които не само изглеждат добре,
-            но и работят ефективно.
-          </p>
-        </div>
+      <div className="container mx-auto py-10">
+        <p className="text-center text-lg max-w-4xl mx-auto">
+          В дигиталния свят Вашият уебсайт не е просто визитка – той е ключов
+          инструмент за развитието на бизнеса Ви. Аз създавам модерни, бързи и
+          надеждни уебсайтове и уеб приложения, които не само изглеждат добре,
+          но и работят ефективно.
+        </p>
       </div>
       <article className="py-10 container mx-auto grid lg:grid-cols-2 gap-10 justify-between items-center">
         <Image
@@ -53,7 +51,7 @@ export default function Services() {
                 <strong>Уеб приложения</strong>
                 <span>
                   {" "}
-                  – интерактивни, динамични и напълно функционалниРаботя
+                  – интерактивни, динамични и напълно функционални
                 </span>
               </p>
             </li>

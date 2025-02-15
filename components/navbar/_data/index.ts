@@ -12,28 +12,8 @@ export const navigationItems: NavigationItem[] = [
     icon: "User",
   },
   {
-    title: "Проекти",
-    link: "/projects",
-    icon: "Box",
-  },
-  {
-    title: "Препоръки",
-    link: "/testimonials",
-    icon: "UsersRound",
-  },
-  {
-    title: "Блог",
-    link: "/blog",
-    icon: "List",
-  },
-  {
     title: "Контакти",
     link: "/contacts",
     icon: "Phone",
-  },
-  {
-    title: "Вход",
-    link: "/login",
-    icon: "User",
   },
 ];

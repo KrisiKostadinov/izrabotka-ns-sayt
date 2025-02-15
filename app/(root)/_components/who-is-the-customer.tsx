@@ -11,8 +11,8 @@ export default function WhyIsTheCustomer() {
           предприемачи и организации, които искат да се отличават онлайн.
         </p>
       </div>
-      <div className="container mx-auto mt-10">
-        <ul className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+      <div className="container mx-auto py-10">
+        <ul className="grid md:grid-cols-2 xl:grid-cols-4 gap-10">
           <DisplayItem
             heading="Малки и средни бизнеси"
             description="Изграждам представителни уебсайтове, които вдъхват доверие и помагат за привличането на нови клиенти."
