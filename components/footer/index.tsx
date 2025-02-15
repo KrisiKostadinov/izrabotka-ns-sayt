@@ -1,7 +1,5 @@
-import DisplayLogo from "@/components/navbar/_components/display-logo";
 import { formatPhoneNumber } from "@/lib/utils";
 import {
-  ArrowLeft,
   ArrowRight,
   MailIcon,
   PhoneIcon,
