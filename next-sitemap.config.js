@@ -1,7 +1,5 @@
-/** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://izrabotka-na-sayt.com",
+  siteUrl: "https://www.izrabotka-na-sayt.com",
   generateRobotsTxt: true,
-  changefreq: "daily",
-  priority: 0.7,
+  sitemapSize: 50000,
 };
