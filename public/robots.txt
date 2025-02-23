@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://izrabotka-na-sayt.com
+
+# Sitemaps
+Sitemap: https://izrabotka-na-sayt.com/sitemap.xml

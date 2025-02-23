@@ -5,10 +5,10 @@ import PageWrapper from "@/components/page-wrapper";
 import { formatPhoneNumber } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Политика на поверителност",
+  title: "Общи условия",
 };
 
-export default function PrivacyPolicy() {
+export default function Terms() {
   return (
     <PageWrapper>
       <main className="min-h-screen">
