@@ -43,7 +43,7 @@ export default function Footer() {
           </ul>
         </article>
         <article>
-          <h3 className="text-2xl font-semibold mb-5">Бързи пръзки</h3>
+          <h3 className="text-2xl font-semibold mb-5">Правни</h3>
           <ul className="flex flex-col gap-2 text-lg">
             <li>
               <Link
